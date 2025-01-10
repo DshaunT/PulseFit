@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition - PulseFit</title>
+    <link rel="stylesheet" href="../styles/nutrition.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="title-container">
+            <span class="pulsefit-box">PulseFit</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="workouts.html">Workouts</a></li>
+                <li><a href="nutrition.html">Nutrition</a></li>
+                <li><a href="motivation.html">Motivational Quotes</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Quote -->
+    <section id="identity-quote">
+        <h2>"Fuel Your Body, Fuel Your Life"</h2>
+        <p>Optimal nutrition leads to optimal performance. Let's fuel up!</p>
+    </section>
+
+    <!-- Main -->
+    <main>
+        <!-- Nutrition Information -->
+        <section id="nutrition-info">
+            <div class="section-content">
+                <h2 class="section-title">Daily Nutritional Needs</h2>
+                <p>Your daily caloric intake varies depending on activity level, age, and goals. Here's a general guideline:</p>
+                <div class="calorie-info">
+                    <div>
+                        <h3>Sedentary</h3>
+                        <p>~ 2,000 - 2,200 calories/day</p>
+                    </div>
+                    <div>
+                        <h3>Moderately Active</h3>
+                        <p>~ 2,300 - 2,500 calories/day</p>
+                    </div>
+                    <div>
+                        <h3>Active</h3>
+                        <p>~ 2,800 - 3,000 calories/day</p>
+                    </div>
+                </div>
+                <canvas id="nutrition-chart"></canvas>
+            </div>
+        </section>
+
+        <!-- Healthy Meals -->
+        <section id="healthy-meals">
+            <h2 class="section-title">Healthy Meal Suggestions</h2>
+            <div id="meal-items">
+                <!-- Chicken Salad -->
+                <div class="meal-item">
+                    <img src="../images/nutrition/chicken-salad.jpg" alt="Chicken Salad">
+                    <h3>Chicken Salad</h3>
+                    <p><strong>Benefits:</strong> Packed with lean protein and fiber, perfect for building muscle and aiding digestion.</p>
+                    <p><strong>Ingredients:</strong> Chicken breast, mixed greens, avocado, tomatoes, olive oil dressing.</p>
+                    <p><strong>Calories:</strong> ~350 calories per serving</p>
+                </div>
+
+                <!-- Quinoa Bowl -->
+                <div class="meal-item">
+                    <img src="../images/nutrition/quinoa-bowl.jpg" alt="Quinoa Bowl">
+                    <h3>Quinoa Bowl</h3>
+                    <p><strong>Benefits:</strong> A great source of complex carbs and plant-based protein. Supports energy levels and muscle recovery.</p>
+                    <p><strong>Ingredients:</strong> Quinoa, black beans, corn, avocado, lime dressing.</p>
+                    <p><strong>Calories:</strong> ~450 calories per serving</p>
+                </div>
+
+                <!-- Salmon & Veggies -->
+                <div class="meal-item">
+                    <img src="../images/nutrition/salmon-veggies.jpg" alt="Salmon and Veggies">
+                    <h3>Salmon & Veggies</h3>
+                    <p><strong>Benefits:</strong> Rich in omega-3 fatty acids and vitamins, supports heart health and reduces inflammation.</p>
+                    <p><strong>Ingredients:</strong> Grilled salmon, asparagus, broccoli, olive oil.</p>
+                    <p><strong>Calories:</strong> ~500 calories per serving</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PulseFit. All rights reserved.</p>
+    </footer>
+
+    <!-- Chart.js for Nutrition Pie Chart -->
+    <script>
+        const ctx = document.getElementById('nutrition-chart').getContext('2d');
+        const nutritionChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Carbohydrates', 'Proteins', 'Fats'],
+                datasets: [{
+                    label: 'Nutrition Distribution',
+                    data: [50, 30, 20], // Example distribution: 50% carbs, 30% proteins, 20% fats
+                    backgroundColor: ['#ffcc00', '#ff6347', '#32cd32'],
+                    borderColor: ['#ffffff', '#ffffff', '#ffffff'],
+                    borderWidth: 1
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
